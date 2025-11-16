@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baú da Vitória</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      @keyframes flutter {
+        0% {
+          transform: translateY(-10vh) translateX(0) rotateZ(0deg);
+          opacity: 1;
+        }
+        25% {
+          transform: translateY(25vh) translateX(10vw) rotateZ(180deg);
+        }
+        50% {
+          transform: translateY(50vh) translateX(-10vw) rotateZ(360deg);
+        }
+        75% {
+          transform: translateY(85vh) translateX(5vw) rotateZ(540deg);
+        }
+        100% {
+          transform: translateY(110vh) translateX(0) rotateZ(720deg);
+          opacity: 0;
+        }
+      }
+      @keyframes beam-rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes text-appear {
+          0% {
+              opacity: 0;
+              transform: scale(0.5) translateY(20px);
+          }
+          100% {
+              opacity: 1;
+              transform: scale(1) translateY(0);
+          }
+      }
+      @keyframes text-glow {
+        0% {
+          text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #00ffff;
+        }
+        25% {
+          text-shadow: 0 0 10px #fff, 0 0 25px #ff00ff, 0 0 35px #00ffff, 0 0 45px #ffff00;
+        }
+        50% {
+          text-shadow: 0 0 10px #fff, 0 0 20px #ffff00, 0 0 30px #ffff00, 0 0 40px #ff00ff;
+        }
+        75% {
+          text-shadow: 0 0 10px #fff, 0 0 25px #ffff00, 0 0 35px #ff00ff, 0 0 45px #00ffff;
+        }
+        100% {
+          text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #00ffff;
+        }
+      }
+      .animate-flutter {
+        animation: flutter linear forwards;
+      }
+      .animate-beam-rotate {
+        animation: beam-rotate 20s linear infinite;
+      }
+      .animate-text-appear {
+          animation: text-appear 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+      .animate-text-glow {
+        animation: text-glow 1.5s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
